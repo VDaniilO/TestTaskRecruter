@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Vacancy</title>
+</head>
+{% block content %}
+<body>
+    <div style="border: 1px solid black; width: 200px; height: 150px;">
+        {% for i in vacancy%}
+            <h2>
+                {{ i.title }}
+            </h2>
+            <p>
+                {{ i.salary }}<br>
+                {{ i.info }}
+            </p>
+        {% endfor %}
+    </div>
+</body>
+{% endblock %}
+</html>

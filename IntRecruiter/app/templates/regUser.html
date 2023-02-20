@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% block content %}
+<body>
+    <form action="{% url 'allVacancy' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> Create </button>
+    </form>
+</body>
+{% endblock %}
+</html>
